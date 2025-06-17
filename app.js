@@ -1,7 +1,19 @@
+const http = require('http')
 
+const server = http.createServer((req,res)=>{
+     console.log(req.url)
+     if(req.url === '/'){
+        res.end('this is the home page')
+        
+     }if(req.url ==='/about'){
+        res.end('this is the about page')
+     }
 
-const empls = require('./names')
-const age_calcul = require('./func')
+     res.end(`<h1>404</h1>
+        <p>We cant seem to find his page</p>
+        <a href="/">back home</a>
+        `)
+})
 
-console.log(empls.emp01)
-age_calcul(1940)
+server.listen(5000)
+
