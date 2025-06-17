@@ -1,10 +1,7 @@
 
-const ahmed = 'ahmed ahmed'
-const mohamed = 'mohamed mohamed'
 
-const print = (name) =>{
-    console.log("calling.... "+ name)
-}
+const empls = require('./names')
+const age_calcul = require('./func')
 
-print(ahmed)
-print(mohamed)
+console.log(empls.emp01)
+age_calcul(1940)
